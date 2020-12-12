@@ -1,0 +1,37 @@
+#include "Board_LED.h"                  // ::Board Support:LED
+#include "LPC17xx.h"
+#include "Board_Joystick.h"             // ::Board Support:Joystick
+#include "Board_Buttons.h"              // ::Board Support:Buttons
+
+
+int main(){
+	// LED_Initialize();
+	// LED_SetOut(0);
+	Buttons_Initialize();
+	LPC_GPIO0->FIODIR = 0xF;
+	LPC_GPIO2->FIODIR = 0xFF;
+	
+	LPC_GPIO0->FIOCLR = 0xF;
+	LPC_GPIO2->FIOCLR = 0xFF;
+	uint32_t state;
+	while(1) {
+	state = Buttons_GetState();
+	if (state == 3) {
+		LPC_GPIO0->FIOSET = 0xF;
+	} else {
+		LPC_GPIO0->FIOCLR = 0xF;
+	}
+}
+/*
+while(1){
+		for(uint32_t i = 0; i < 8; i++){
+			LED_SetOut(0);
+			LED_On(i);
+			for(int k = 0; k < 1000000; k++);
+				
+	}
+}
+*/
+	return 0;
+}
+
