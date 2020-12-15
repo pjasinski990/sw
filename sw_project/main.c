@@ -8,17 +8,13 @@
 #include <stdlib.h>
 #include <math.h>
 #include "lcd_painting.h"
-
+#include "snake.h"
 
 int calibration_cords[4][2] = {0};
 volatile uint32_t msTicks = 0;
 
 void SysTick_Handler(void)  {                               /* SysTick interrupt Handler. */  
 	msTicks++; 
-}
-
-float sign(float x) {
-	return x < 0? -1.0f:1.0f;
 }
 
 
@@ -83,20 +79,8 @@ void convertTStoLCD(int xts, int yts, int* xres, int* yres) {
 	*yres = yts;
 }
 
-typedef struct {
-	struct segment* next;
-	int x, y;
-} segment;
 
-typedef struct {
-	int isAlive;
-	segment* head;
-	
-} snake;
 
-void drawSegment(segment* s, int gridsize) {
-	drawRect(s->x, s->y, s->x+gridsize, s->y+gridsize, LCDBlack);
-}
 
 /*
 	funkcja decydujaca o kierunku
@@ -118,20 +102,18 @@ int main() {
 	
 	while(1) {
 		clearScreen(LCDBlueSea);
-		const int GRID_SIZE = 20;
+		//const int GRID_SIZE = 20;
 		int alive = 1;
-		snake s;
-		s.isAlive = 1;
-		s.head = malloc(sizeof(segment));
-		s.head->next = NULL;
-		s.head->x = 200;
-		s.head->y = 200;
-		
+		Snake s;
+		initSnake(&s);
+		/*Aktualny kierunek ruchu weza*/
+		Direction direction = UP;
 		while (alive) {
 			while (msTicks < 300);
 			msTicks = 0;
 			clearScreen(LCDBlueSea);
-			drawSegment(s.head, GRID_SIZE);
+			drawSnake(&s);
+			//drawSegment(s.head);
 			//moveSegments(s);
 			
 			//drawSnake();
