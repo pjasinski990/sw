@@ -11,6 +11,7 @@ typedef struct {
 
 typedef struct {
 	int isAlive;
+	int lenght;
 	Segment* head;
 	
 } Snake;
@@ -19,7 +20,7 @@ enum Direction{
     LEFT, UP, RIGHT, DOWN
 };
 
-void drawSegment(Segment* s, int gridsize);
+void drawSegment(Segment* s);
 Segment* createSegment();
 void initSnake(Snake* snake);
 void drawSnake(Snake* snake);
