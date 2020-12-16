@@ -85,10 +85,10 @@ void convertTStoLCD(int xts, int yts, int* xres, int* yres) {
 /*
 	funkcja decydujaca o kierunku
 	funkcja skalujaca koordynaty z ts
-	generowanie startowego weza
-	kolizja z jedzeniem i sciana/innym segmentem
+	generowanie startowego weza + 
+	kolizja z jedzeniem i sciana/innym segmentem + (trzeba jedzenie zrobic)
 	przerwania z tsa 
-	przesuwanie calego weza
+	przesuwanie calego weza + 
 	generowanie jedzenia na mapie
 */
 int main() {
@@ -103,12 +103,17 @@ int main() {
 	while(1) {
 		clearScreen(LCDBlueSea);
 		//const int GRID_SIZE = 20;
-		int alive = 1;
+		
 		Snake s;
 		initSnake(&s);
-		/*Aktualny kierunek ruchu weza*/
-		Direction direction = UP;
-		while (alive) {
+		Food food;
+		initFood(&food);
+		/*
+		Aktualny kierunek ruchu weza, ktory nawet powienien byc globalny i 
+		volatile, by przerwanie moglo go modyfikowac
+		*/
+		enum Direction direction = UP;
+		while (s.isAlive) {
 			while (msTicks < 300);
 			msTicks = 0;
 			clearScreen(LCDBlueSea);
