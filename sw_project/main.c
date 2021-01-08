@@ -86,10 +86,10 @@ void convertTStoLCD(int xts, int yts, int* xres, int* yres) {
 	funkcja decydujaca o kierunku
 	funkcja skalujaca koordynaty z ts
 	generowanie startowego weza + 
-	kolizja z jedzeniem i sciana/innym segmentem + (trzeba jedzenie zrobic)
+	kolizja z jedzeniem i sciana/innym segmentem + 
 	przerwania z tsa 
 	przesuwanie calego weza + 
-	generowanie jedzenia na mapie
+	generowanie jedzenia na mapie +
 */
 int main() {
 	lcdConfiguration();
