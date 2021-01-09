@@ -9,8 +9,8 @@
 #define START_POSITION_Y 200
 
 /*Jesli wymiary beda na odwrot, wystarczy zamienic ponizsze wartosci*/
-#define LENGHT_LCD 320 // do x
-#define WIDTH_LCD 240 // do y
+#define LENGHT_LCD 240 // do x
+#define WIDTH_LCD 320 // do y
 
 #define START_FOOD_POSITION_X 100
 #define START_FOOD_POSITION_Y 100
@@ -19,12 +19,12 @@
 Elementy zakomentowane musialem zakomentowac xDD , by moc 
 skompilowac to u siebie na kompie bez tych fancy bibliotek
 */
-/*
+
 void drawSegment(Segment* s) {
 	drawRect(s->x, s->y, s->x+GRID_SIZE, s->y+GRID_SIZE, LCDBlack);
 }
-*/
-/*
+
+
 void drawSnake(Snake* snake){
     Segment* temp = snake->head;
     while(temp != NULL){
@@ -32,12 +32,12 @@ void drawSnake(Snake* snake){
         temp = temp->next;
     }
 }
-*/
-/*
+
+
 void drawFood(Food* food){
     drawRect(food->x, food->y, food->x+GRID_SIZE, food->y+GRID_SIZE, LCDGreen);
 }
-*/
+
 
 
 Segment* createSegment(){
@@ -201,11 +201,11 @@ int checkCollisionWithBorders(Snake* snake){
 
     if(snake->head->x < 0)
         return 0;
-    if(snake->head->x > LENGHT_LCD)
+    if(snake->head->x >= LENGHT_LCD)
         return 0;
     if(snake->head->y < 0)
         return 0;
-    if(snake->head->y > WIDTH_LCD)
+    if(snake->head->y >= WIDTH_LCD)
         return 0;
     return 1;
 }
@@ -284,5 +284,47 @@ int checkYFoodAndSnake(int y, Snake* snake){
         temp = temp->next;
     }
     return flag;
+}
+
+enum Direction changeDirection(enum Direction actual_direction, int turn ){
+    if(actual_direction == UP){
+        if(turn == TURN_LEFT){
+            return LEFT;
+        }
+        else
+        {
+            return RIGHT;
+        }
+    }
+
+    if(actual_direction == LEFT){
+        if(turn == TURN_LEFT){
+            return DOWN;
+        }
+        else
+        {
+            return UP;
+        }
+    }
+
+    if(actual_direction == DOWN){
+        if(turn == TURN_LEFT){
+            return RIGHT;
+        }
+        else
+        {
+            return LEFT;
+        }
+    }
+
+    if(actual_direction == RIGHT){
+        if(turn == TURN_LEFT){
+            return UP;
+        }
+        else
+        {
+            return DOWN;
+        }
+    }
 }
 

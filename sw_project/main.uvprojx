@@ -412,6 +412,16 @@
               <FileType>5</FileType>
               <FilePath>.\lcd_painting.h</FilePath>
             </File>
+            <File>
+              <FileName>lcd_painting.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\lcd_painting.c</FilePath>
+            </File>
+            <File>
+              <FileName>snake.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\snake.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

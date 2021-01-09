@@ -1,10 +1,11 @@
 #include "lcd_painting.h"
-#include "LPC17xx.h"                    // Device header
+//#include "LPC17xx.h"                    // Device header
 #include "Open1768_LCD.h"
-#include "Board_LED.h"                  // ::Board Support:LED
+//#include "Board_LED.h"                  // ::Board Support:LED
 #include "LCD_ILI9325.h"
 #include "asciiLib.h"
 #include "TP_Open1768.h"
+#include <math.h>
 
 
 void drawPoint(unsigned int x, unsigned int y, unsigned int color) {

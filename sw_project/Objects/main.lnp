@@ -4,6 +4,8 @@
 ".\objects\lcd_ili9325.o"
 ".\objects\asciilib.o"
 ".\objects\tp_open1768.o"
+".\objects\lcd_painting.o"
+".\objects\snake.o"
 ".\objects\led_open1768.o"
 ".\objects\gpio_lpc17xx.o"
 ".\objects\pin_lpc17xx.o"

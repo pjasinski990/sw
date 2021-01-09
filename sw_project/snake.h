@@ -3,7 +3,13 @@
 #ifndef __snake_H
 #define __snake_H
 
-typedef struct {
+#define TURN_LEFT 0
+#define TURN_RIGHT 1
+
+#define LENGHT_LCD 240 // do x
+#define WIDTH_LCD 320 // do y
+
+typedef struct Segment {
 	struct Segment* next;
 	int x, y;
 } Segment;
@@ -62,4 +68,6 @@ int checkYFoodAndSnake(int y, Snake* snake);
 Funkcje private moga byc tylko w pliku .c, ale napisalem je tez tu, 
 by wiedziec, ze istnieja
 */
+
+enum Direction changeDirection(enum Direction actual_direction, int turn );
 #endif

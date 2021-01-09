@@ -19,7 +19,7 @@ void printCords(int x, int y);
 void printTSCords();
 void drawCalibrationX(unsigned int x, unsigned int y);
 
-float sign(float x) {
+inline float sign(float x) {
 	return x < 0? -1.0f:1.0f;
 }
 #endif
