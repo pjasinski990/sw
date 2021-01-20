@@ -23,14 +23,19 @@ skompilowac to u siebie na kompie bez tych fancy bibliotek
 void drawSegment(Segment* s) {
 	drawRect(s->x, s->y, s->x+GRID_SIZE, s->y+GRID_SIZE, LCDBlack);
 }
-
+int position_to_paint_over_X = -1;
+int position_to_paint_over_Y = -1;
+ 
 
 void drawSnake(Snake* snake){
-    Segment* temp = snake->head;
-    while(temp != NULL){
-        drawSegment(temp);
-        temp = temp->next;
-    }
+    drawSegment(snake->head);
+    /*Painting over last segment of the snake*/
+    drawRect(position_to_paint_over_X, position_to_paint_over_Y, position_to_paint_over_X + GRID_SIZE, position_to_paint_over_Y + GRID_SIZE, LCDBlueSea);
+    // Segment* temp = snake->head;
+    // while(temp != NULL){
+    //     drawSegment(temp);
+    //     temp = temp->next;
+    // }
 }
 
 
@@ -104,7 +109,11 @@ moveSnakeHead -> drawSnake
 Dziala na zasadzie, ze z aktualnego segmentu przenosimy x i y do nastepnego segmentu
 */
 void moveSnake(Snake* snake){
-    if(snake->head->next == NULL) return;
+    if(snake->head->next == NULL){
+        position_to_paint_over_X = snake->head->x;
+        position_to_paint_over_Y = snake->head->y;
+        return;
+    } 
     int x,y;
     int tempX, tempY;
     Segment* head = snake->head;
@@ -125,6 +134,8 @@ void moveSnake(Snake* snake){
         y = tempY;
         head = head->next;
     }
+    position_to_paint_over_X = x;
+    position_to_paint_over_Y = y;
 }
 
 /*
