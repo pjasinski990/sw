@@ -21,16 +21,16 @@ Target DLL:      UL2CM3.DLL V1.162.7.0
 Dialog DLL:      TCM.DLL V1.36.1.0
  
 <h2>Project:</h2>
-C:\Users\TEMP\Desktop\better_snake\sw_project\main.uvprojx
-Project File Date:  01/15/2021
+C:\Users\8radzik\Desktop\DMA_NOTW\sw_project\main.uvprojx
+Project File Date:  01/20/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'Target 1'
 compiling asciiLib.c...
 compiling LCD_ILI9325.c...
-compiling TP_Open1768.c...
 compiling Open1768_LCD.c...
+compiling TP_Open1768.c...
 compiling main.c...
 lcd_painting.h(19): warning:  #1295-D: Deprecated declaration printTSCords - give arg types
   void printTSCords();
@@ -40,21 +40,15 @@ snake.h(56): warning:  #1295-D: Deprecated declaration createSegment - give arg 
   Segment* createSegment();
 snake.h(73): warning:  #1-D: last line of file ends without a newline
   #endif
-main.c(34): warning:  #61-D: integer operation result is out of range
-  	LPC_GPDMACH0->DMACCControl = 16 | (0b1 << 26) | (0b1 << 31);
-main.c(152): warning:  #61-D: integer operation result is out of range
-  	LPC_GPDMACH0->DMACCControl = 16 | (0b1 << 26) | (0b1 << 31);     // cel nie podlega inkrementacji
-main.c(169): warning:  #177-D: variable "middleX"  was declared but never referenced
+main.c(49): warning:  #61-D: integer operation result is out of range
+  	LPC_GPDMACH0->DMACCControl = 16 | (0b1 << 26) | (0b1 << 31) | (1 << 18) | (1 << 21);
+main.c(185): warning:  #61-D: integer operation result is out of range
+  	LPC_GPDMACH0->DMACCControl = 16 | (0b1 << 26) | (0b1 << 31) | (1 << 18) | (1 << 21);
+main.c(203): warning:  #177-D: variable "middleX"  was declared but never referenced
   		int middleX = (calibration_cords[0][0] + calibration_cords[1][0]) / 2;
-main.c(194): warning:  #111-D: statement is unreachable
+main.c(228): warning:  #111-D: statement is unreachable
   	return 0;
 main.c: 8 warnings, 0 errors
-compiling lcd_painting.c...
-lcd_painting.h(19): warning:  #1295-D: Deprecated declaration printTSCords - give arg types
-  void printTSCords();
-lcd_painting.h(25): warning:  #1-D: last line of file ends without a newline
-  #endif
-lcd_painting.c: 2 warnings, 0 errors
 compiling snake.c...
 snake.h(56): warning:  #1295-D: Deprecated declaration createSegment - give arg types
   Segment* createSegment();
@@ -67,13 +61,19 @@ lcd_painting.h(25): warning:  #1-D: last line of file ends without a newline
 snake.c(329): warning:  #940-D: missing return statement at end of non-void function "changeDirection" 
   }
 snake.c: 5 warnings, 0 errors
+compiling lcd_painting.c...
+lcd_painting.h(19): warning:  #1295-D: Deprecated declaration printTSCords - give arg types
+  void printTSCords();
+lcd_painting.h(25): warning:  #1-D: last line of file ends without a newline
+  #endif
+lcd_painting.c: 2 warnings, 0 errors
 assembling startup_LPC17xx.s...
 compiling GPIO_LPC17xx.c...
 compiling LED_Open1768.c...
 compiling PIN_LPC17xx.c...
 compiling system_LPC17xx.c...
 linking...
-Program Size: Code=8122 RO-data=3294 RW-data=28 ZI-data=1388  
+Program Size: Code=8286 RO-data=3310 RW-data=176 ZI-data=1384  
 ".\Objects\main.axf" - 0 Error(s), 15 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -118,19 +118,19 @@ Package Vendor: Keil
       Source file:   Boards\Waveshare\Open1768\Common\LED_Open1768.c
 
    * Component: Keil::Device:GPIO:1.1.0
-      Source file:   RTE_Driver\GPIO_LPC17xx.c
       Include file:  RTE_Driver\GPIO_LPC17xx.h
+      Source file:   RTE_Driver\GPIO_LPC17xx.c
 
    * Component: Keil::Device:PIN:1.0.0
-      Include file:  RTE_Driver\PIN_LPC17xx.h
       Source file:   RTE_Driver\PIN_LPC17xx.c
+      Include file:  RTE_Driver\PIN_LPC17xx.h
 
    * Component: Keil::Device:Startup:1.0.0
-      Include file:  Device\Include\LPC17xx.h
       Source file:   Device\Source\ARM\startup_LPC17xx.s
-      Source file:   Device\Source\system_LPC17xx.c
       Include file:  RTE_Driver\Config\RTE_Device.h
-Build Time Elapsed:  00:00:00
+      Include file:  Device\Include\LPC17xx.h
+      Source file:   Device\Source\system_LPC17xx.c
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

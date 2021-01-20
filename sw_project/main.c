@@ -15,7 +15,9 @@ int currentCalibrationCorner = 0;
 int calibration_cords[4][2] = {0};
 volatile uint32_t msTicks = 0;
 volatile uint32_t directionTicks = 0;
+volatile uint32_t toneTicks = 0;
 volatile unsigned int v = 0;
+volatile char tone = 2;
 
 short samples[] = {1023,1022,1016,1006,993,976,954,931,904,874,841,806,768,728,
 687,645,601,557,512,468,423,379,337,296,256,219,183,150,120,
@@ -27,26 +29,36 @@ enum Direction direction = UP;
 
 void takeTSCoords(int* x, int* y);
 
+void setTone(short frequency) {
+	short samplesSize = sizeof(samples) / sizeof(*samples);
+	short divider = samplesSize * frequency;
+	
+	LPC_TIM1->MR0  = (uint32_t)(SystemCoreClock / 4 / divider);
+}
+
 void SysTick_Handler(void) {  /* SysTick interrupt Handler. */ 
 	msTicks++; 
 	directionTicks++;
+	toneTicks++;
+
 }
 
-void DMA_IRQnHandler() {
-	LPC_GPDMACH0->DMACCSrcAddr = (int)samples;
-	// LPC_GPDMACH0->DMACCLLI = 0; -- powinno dzialac bez tego
-	LPC_GPDMACH0->DMACCControl = 16 | (0b1 << 26) | (0b1 << 31);
-	LPC_GPDMACH0->DMACCConfig = 1 | (0b1<<11) | (7 << 6);
+void DMA_IRQHandler() {
+	LPC_GPDMACH0->DMACCSrcAddr = (uint32_t)samples;
+	
+	LPC_GPDMACH0->DMACCControl = 16 | (0b1 << 26) | (0b1 << 31) | (1 << 18) | (1 << 21);
+	LPC_GPDMACH0->DMACCConfig = 1 | (0b1<<11) | (10 << 6) | (1 << 14) | (1 << 15); 
 	
 	LPC_GPDMA->DMACIntTCClear = 1;
 	LPC_GPDMA->DMACIntErrClr = 1;
 }
 
 void TIMER1_IRQHandler(void) {
-    LPC_DAC->DACR= samples[v] << 6;
-    v++;
-    v %= sizeof(samples) / sizeof(*samples);
-    LPC_TIM1->IR = 1;
+		// LPC_DAC->DACR = samples[v];
+		// v++;
+    // v %= sizeof(samples) / sizeof(*samples);
+
+		LPC_TIM1->IR = 1;
 }
 
 
@@ -88,7 +100,7 @@ void EINT3_IRQHandler() {
 	takeTSCoords(&x, &y);
 	if (x < (calibration_cords[0][0] + calibration_cords[1][0]) / 2) {direction = changeDirection(direction, TURN_LEFT);}
 		else {direction = changeDirection(direction, TURN_RIGHT);}
-		
+	
 	NVIC_EnableIRQ(EINT3_IRQn);
 	LPC_GPIOINT->IO0IntClr = PIN_TP_INT;
 }
@@ -116,7 +128,16 @@ void takeTSCoords(int* resx, int* resy) {
 	msTicks = 0;
 }
 
+
+void prepareSamples(){
+	for (int i = 0; i < sizeof(samples)/sizeof(*samples); ++i) {
+		samples[i] <<= 6;
+	}
+}
+
 int main() {
+	prepareSamples();
+	
 	lcdConfiguration();
 	init_ILI9325();
 	touchpanelInit();
@@ -133,24 +154,23 @@ int main() {
 	
 	/* ------------------------------------------------------------ */
 	/* DAC */
-	/*
+	
 	    	
 	PIN_Configure(0, 26, PIN_FUNC_2, PIN_PINMODE_TRISTATE, PIN_PINMODE_NORMAL);	// gpio dac 
 	// LPC_DAC->DACCTRL = 1 << 2 | 1 << 3; // timer enabled, dma burst request enabled 
 	// LPC_DAC->DACCNTVAL = 12500; // dac timer for dma requesting 
 	 
-	*/
 
 	/* timer 1 dla DMA */
 	LPC_TIM1->PR = 0;
-	LPC_TIM1->MR0  = SystemCoreClock / 4 / 18500;
+	setTone(400);
 	LPC_TIM1->MCR = 3;
 	LPC_TIM1->TCR = 1;
 	NVIC_EnableIRQ(TIMER1_IRQn);
 
 	/* ----------------------- */ 
 
-	
+		
 	/* ------------------------------------------------------------ */
 	/* DMA */
 	LPC_SC->PCONP |= 0b1 << 29;
@@ -162,14 +182,14 @@ int main() {
 	LPC_GPDMACH0->DMACCSrcAddr = (uint32_t)samples; 
 	LPC_GPDMACH0->DMACCDestAddr = (uint32_t)&LPC_DAC->DACR; 
 	LPC_GPDMACH0->DMACCLLI = 0; 
-	LPC_GPDMACH0->DMACCControl = 16 | (0b1 << 26) | (0b1 << 31);     // cel nie podlega inkrementacji
+	LPC_GPDMACH0->DMACCControl = 16 | (0b1 << 26) | (0b1 << 31) | (1 << 18) | (1 << 21); // TO MOZE BYC 2<<18 OGARNAC
 	// 1 << 26 - zrodlo jest inkrementowane (cel nie)
 	// 16 - szesnastobitowe rozmiary
 	// 1 << 31 - wlaczamy przerwanie
 
-	LPC_GPDMACH0->DMACCConfig = 1 | (0b1<<11) | (7 << 6);      // enable channel 0
+	LPC_GPDMACH0->DMACCConfig = 1 | (0b1 << 11) | (10 << 6) | (1 << 14) | (1 << 15);      // enable channel 0
  	// 1 << 11 - typ pamiec peryferium
- 	// 7 << 6 - zrodlo dac ( jezeli dobrze myslimy i bity 10:6 to te od peryferium docelowego, wczesniej bylo <<1 )
+ 	// 10 << 6 - zrodlo timer ( jezeli dobrze myslimy i bity 10:6 to te od peryferium docelowego)
  	// zerowanie bitu 14 clearuje IE
 	NVIC_EnableIRQ(DMA_IRQn);
 
@@ -177,9 +197,9 @@ int main() {
 
 	drawCalibrationGrid();
 	while (currentCalibrationCorner < 4);
-			
+	
 	while(1) {
-		clearScreen(LCDBlueSea);
+		//clearScreen(LCDBlueSea);
 		int middleX = (calibration_cords[0][0] + calibration_cords[1][0]) / 2;
 		//const int GRID_SIZE = 20;
 		
