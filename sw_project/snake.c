@@ -5,8 +5,8 @@
 
 #define GRID_SIZE 20
 
-#define START_POSITION_X 200
-#define START_POSITION_Y 200
+#define START_POSITION_X 120
+#define START_POSITION_Y 160
 
 /*Jesli wymiary beda na odwrot, wystarczy zamienic ponizsze wartosci*/
 #define LENGHT_LCD 240 // do x
@@ -30,12 +30,14 @@ int position_to_paint_over_Y = -1;
 void drawSnake(Snake* snake){
     drawSegment(snake->head);
     /*Painting over last segment of the snake*/
-    drawRect(position_to_paint_over_X, position_to_paint_over_Y, position_to_paint_over_X + GRID_SIZE, position_to_paint_over_Y + GRID_SIZE, LCDBlueSea);
-    // Segment* temp = snake->head;
-    // while(temp != NULL){
-    //     drawSegment(temp);
-    //     temp = temp->next;
-    // }
+    // drawRect(position_to_paint_over_X, position_to_paint_over_Y, position_to_paint_over_X + GRID_SIZE, position_to_paint_over_Y + GRID_SIZE, LCDBlueSea);
+    Segment* temp = snake->head;
+    while(temp != NULL){
+        drawSegment(temp);
+        temp = temp->next;
+    }
+	drawRect(position_to_paint_over_X, position_to_paint_over_Y, position_to_paint_over_X + GRID_SIZE, position_to_paint_over_Y + GRID_SIZE, LCDBlueSea);
+
 }
 
 

@@ -1,5 +1,5 @@
 Dependencies for Project 'main', Target 'Target 1': (DO NOT MODIFY !)
-F (.\main.c)(0x600853BA)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x600B0A2A)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\LPC17xx.h)(0x58493F92)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm3.h)(0x5B61D2F4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F2F9E)
@@ -8,21 +8,21 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B61D2F4)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\mpu_armv7.h)(0x5B61D2F4)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (Open1768_LCD.h)(0x60082CDF)
+I (Open1768_LCD.h)(0x600AD206)
 I (C:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board\Board_LED.h)(0x5877623C)
-I (LCD_ILI9325.h)(0x60082CDD)
-I (asciiLib.h)(0x60082CDF)
+I (LCD_ILI9325.h)(0x600AD204)
+I (asciiLib.h)(0x600AD206)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599F2F9C)
-I (TP_Open1768.h)(0x60082CE4)
+I (TP_Open1768.h)(0x600AD20B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599F2F9C)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\PIN_LPC17xx.h)(0x5D5BD5BA)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F2F9E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599F2F9C)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x599F2F9E)
-I (lcd_painting.h)(0x60082CE5)
-I (snake.h)(0x60082CDD)
-F (.\Open1768_LCD.c)(0x60082CE4)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\open1768_lcd.o --omf_browse .\objects\open1768_lcd.crf --depend .\objects\open1768_lcd.d)
-I (Open1768_LCD.h)(0x60082CDF)
+I (lcd_painting.h)(0x600AD20C)
+I (snake.h)(0x600AF800)
+F (.\Open1768_LCD.c)(0x600AD20B)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\open1768_lcd.o --omf_browse .\objects\open1768_lcd.crf --depend .\objects\open1768_lcd.d)
+I (Open1768_LCD.h)(0x600AD206)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\LPC17xx.h)(0x58493F92)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm3.h)(0x5B61D2F4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F2F9E)
@@ -32,10 +32,10 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B61D
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\mpu_armv7.h)(0x5B61D2F4)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599F2F9C)
-I (LCD_ILI9325.h)(0x60082CDD)
-F (.\LCD_ILI9325.c)(0x60082CDF)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\lcd_ili9325.o --omf_browse .\objects\lcd_ili9325.crf --depend .\objects\lcd_ili9325.d)
-I (LCD_ILI9325.h)(0x60082CDD)
-I (Open1768_LCD.h)(0x60082CDF)
+I (LCD_ILI9325.h)(0x600AD204)
+F (.\LCD_ILI9325.c)(0x600AD206)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\lcd_ili9325.o --omf_browse .\objects\lcd_ili9325.crf --depend .\objects\lcd_ili9325.d)
+I (LCD_ILI9325.h)(0x600AD204)
+I (Open1768_LCD.h)(0x600AD206)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\LPC17xx.h)(0x58493F92)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm3.h)(0x5B61D2F4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F2F9E)
@@ -44,11 +44,11 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B61D2F4)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\mpu_armv7.h)(0x5B61D2F4)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-F (.\asciiLib.c)(0x60082CE4)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\asciilib.o --omf_browse .\objects\asciilib.crf --depend .\objects\asciilib.d)
-I (asciiLib.h)(0x60082CDF)
+F (.\asciiLib.c)(0x600AD20B)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\asciilib.o --omf_browse .\objects\asciilib.crf --depend .\objects\asciilib.d)
+I (asciiLib.h)(0x600AD206)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599F2F9C)
-F (.\TP_Open1768.c)(0x60082CDF)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\tp_open1768.o --omf_browse .\objects\tp_open1768.crf --depend .\objects\tp_open1768.d)
-I (TP_Open1768.h)(0x60082CE4)
+F (.\TP_Open1768.c)(0x600AD206)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\tp_open1768.o --omf_browse .\objects\tp_open1768.crf --depend .\objects\tp_open1768.d)
+I (TP_Open1768.h)(0x600AD20B)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\lpc17xx.h)(0x58493F92)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm3.h)(0x5B61D2F4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F2F9E)
@@ -58,10 +58,10 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B61D
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\mpu_armv7.h)(0x5B61D2F4)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599F2F9C)
-F (.\lcd_painting.h)(0x60082CE5)()
-F (.\lcd_painting.c)(0x60082CE4)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\lcd_painting.o --omf_browse .\objects\lcd_painting.crf --depend .\objects\lcd_painting.d)
-I (lcd_painting.h)(0x60082CE5)
-I (Open1768_LCD.h)(0x60082CDF)
+F (.\lcd_painting.h)(0x600AD20C)()
+F (.\lcd_painting.c)(0x600AF390)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\lcd_painting.o --omf_browse .\objects\lcd_painting.crf --depend .\objects\lcd_painting.d)
+I (lcd_painting.h)(0x600AD20C)
+I (Open1768_LCD.h)(0x600AD206)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\LPC17xx.h)(0x58493F92)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm3.h)(0x5B61D2F4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F2F9E)
@@ -70,16 +70,16 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B61D2F4)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\mpu_armv7.h)(0x5B61D2F4)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (LCD_ILI9325.h)(0x60082CDD)
-I (asciiLib.h)(0x60082CDF)
+I (LCD_ILI9325.h)(0x600AD204)
+I (asciiLib.h)(0x600AD206)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599F2F9C)
-I (TP_Open1768.h)(0x60082CE4)
+I (TP_Open1768.h)(0x600AD20B)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599F2F9C)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x599F2F9E)
-F (.\snake.c)(0x60082CDF)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\snake.o --omf_browse .\objects\snake.crf --depend .\objects\snake.d)
-I (snake.h)(0x60082CDD)
-I (LCD_ILI9325.h)(0x60082CDD)
-I (lcd_painting.h)(0x60082CE5)
+F (.\snake.c)(0x600B0021)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\snake.o --omf_browse .\objects\snake.crf --depend .\objects\snake.d)
+I (snake.h)(0x600AF800)
+I (LCD_ILI9325.h)(0x600AD204)
+I (lcd_painting.h)(0x600AD20C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x599F2F9C)
 F (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Boards\Waveshare\Open1768\Common\LED_Open1768.c)(0x5D92F9CE)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\led_open1768.o --omf_browse .\objects\led_open1768.crf --depend .\objects\led_open1768.d)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\PIN_LPC17xx.h)(0x5D5BD5BA)
@@ -115,9 +115,9 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\mpu_armv7.h)(0x5B61D2F
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver\PIN_LPC17xx.h)(0x5D5BD5BA)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x599F2F9E)
-F (RTE\Device\LPC1768\RTE_Device.h)(0x60082CDE)()
-F (RTE\Device\LPC1768\startup_LPC17xx.s)(0x60082CDE)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board--pd "__UVISION_VERSION SETA 527" --pd "_RTE_ SETA 1" --pd "LPC175x_6x SETA 1"--list .\listings\startup_lpc17xx.lst --xref -o .\objects\startup_lpc17xx.o --depend .\objects\startup_lpc17xx.d)
-F (RTE\Device\LPC1768\system_LPC17xx.c)(0x60082CDE)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\system_lpc17xx.o --omf_browse .\objects\system_lpc17xx.crf --depend .\objects\system_lpc17xx.d)
+F (RTE\Device\LPC1768\RTE_Device.h)(0x600AD205)()
+F (RTE\Device\LPC1768\startup_LPC17xx.s)(0x600AF653)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board--pd "__UVISION_VERSION SETA 527" --pd "_RTE_ SETA 1" --pd "LPC175x_6x SETA 1"--list .\listings\startup_lpc17xx.lst --xref -o .\objects\startup_lpc17xx.o --depend .\objects\startup_lpc17xx.d)
+F (RTE\Device\LPC1768\system_LPC17xx.c)(0x600AD205)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\LPC1768-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\RTE_Driver-IC:\Keil_v5\ARM\PACK\Keil\MDK-Middleware\7.8.0\Board-D__UVISION_VERSION="527" -D_RTE_ -DLPC175x_6x -DLCD_ILI9325-o .\objects\system_lpc17xx.o --omf_browse .\objects\system_lpc17xx.crf --depend .\objects\system_lpc17xx.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F2F9E)
 I (C:\Keil_v5\ARM\PACK\Keil\LPC1700_DFP\2.6.1\Device\Include\LPC17xx.h)(0x58493F92)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm3.h)(0x5B61D2F4)

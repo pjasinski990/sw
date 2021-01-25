@@ -83,7 +83,7 @@ void drawLetter(unsigned int font, char letter, unsigned int xpos, unsigned int 
 				lcdWriteData(LCDBlack);
 			}
 			else {
-				lcdWriteData(LCDWhite);
+				lcdWriteData(LCDBlueSea);
 			}
 		}
 	}
@@ -140,10 +140,5 @@ void printTSCords() {
 	int x, y;
 	touchpanelGetXY(&x, &y);
 	printCords(x, y);
-}
-
-void drawCalibrationX(unsigned int x, unsigned int y) {
-	drawLine(x-5, y, x+5, y, LCDBlack);
-	drawLine(x, y-5, x, y+5, LCDBlack);
 }
 
